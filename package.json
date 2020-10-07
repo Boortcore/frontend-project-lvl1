@@ -1,0 +1,23 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "hexlet project",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Boortcore/frontend-project-lvl1.git"
+  },
+  "author": "Sergey Burtylev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Boortcore/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/Boortcore/frontend-project-lvl1#readme"
+}
