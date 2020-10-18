@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-const startGame = require('../src/game-logic');
+import startGame from '../src/games/brain-even/index.js';
 
 startGame();

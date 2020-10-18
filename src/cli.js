@@ -1,6 +1,6 @@
-const promptly = require('promptly');
+import promptly from 'promptly';
 
-module.exports = async () => {
+export default async () => {
   console.log('Welcome to the Brain Games!');
   const name = await promptly.prompt('May I have your name?');
   console.log(`Hello, ${name}!`);

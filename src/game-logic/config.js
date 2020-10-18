@@ -1,7 +1,0 @@
-module.exports = {
-  MIN_NUMBER: 0,
-  MAX_NUMBER: 20,
-  WINNING: 'WINNING',
-  FAIL: 'FAIL',
-  MAX_QUESTION_NUMBER: 3,
-};
