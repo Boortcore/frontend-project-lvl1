@@ -8,7 +8,13 @@
 [![brain-calc](https://asciinema.org/a/ra80CvhNr4GLINlsTwKhnR6MY.svg)](https://asciinema.org/a/ra80CvhNr4GLINlsTwKhnR6MY)
 
 ## brain-gcd game
-[![asciicast](https://asciinema.org/a/sGA85NcQEugjxnd8RcJEmJ6SK.svg)](https://asciinema.org/a/sGA85NcQEugjxnd8RcJEmJ6SK)
+[![brain-gcd](https://asciinema.org/a/sGA85NcQEugjxnd8RcJEmJ6SK.svg)](https://asciinema.org/a/sGA85NcQEugjxnd8RcJEmJ6SK)
+
+## brain-progression game
+[![brain-progression](https://asciinema.org/a/P0zCEbLNqakNeJyFQoRtQ2ti8.svg)](https://asciinema.org/a/P0zCEbLNqakNeJyFQoRtQ2ti8)
+
+## brain-prime game
+[![brain-prime](https://asciinema.org/a/zsp0Ogh5MJ2079AirjV6ZGh06.svg)](https://asciinema.org/a/zsp0Ogh5MJ2079AirjV6ZGh06)
 
 ### Hexlet tests and linter status:
 [![Node CI](https://github.com/Boortcore/frontend-project-lvl1/workflows/Node%20CI/badge.svg)](https://github.com/Boortcore/frontend-project-lvl1/actions)
