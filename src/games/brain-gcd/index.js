@@ -11,9 +11,15 @@ const getCorrectAnswer = (string) => {
   return String(getGcd(+number1, +number2));
 };
 
-const makeGameStep = initGameStep({
-  getTextQuestion: () => `${getRandomInteger(MIN_NUMBER, MAX_NUMBER)} ${getRandomInteger(MIN_NUMBER, MAX_NUMBER)}`,
-  getCorrectAnswer,
-});
+const getQuestionInfo = () => {
+  const text = `${getRandomInteger(MIN_NUMBER, MAX_NUMBER)} ${getRandomInteger(MIN_NUMBER, MAX_NUMBER)}`;
+  const correctAnswer = getCorrectAnswer(text);
+  return {
+    text,
+    correctAnswer,
+  };
+};
+
+const makeGameStep = initGameStep({ getQuestionInfo });
 
 export default initGame(makeGameStep, rulesText);

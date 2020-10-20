@@ -6,9 +6,15 @@ const rulesText = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
 
-const makeGameStep = initGameStep({
-  getTextQuestion: () => getRandomInteger(MIN_NUMBER, MAX_NUMBER),
-  getCorrectAnswer: isEven,
-});
+const getQuestionInfo = () => {
+  const text = getRandomInteger(MIN_NUMBER, MAX_NUMBER);
+  const correctAnswer = isEven(+text);
+  return {
+    text,
+    correctAnswer,
+  };
+};
+
+const makeGameStep = initGameStep({ getQuestionInfo });
 
 export default initGame(makeGameStep, rulesText);

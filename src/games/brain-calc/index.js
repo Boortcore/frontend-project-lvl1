@@ -27,9 +27,15 @@ const getCorrectAnswer = (expression) => {
   }
 };
 
-const makeGameStep = initGameStep({
-  getTextQuestion: getRandomExpression,
-  getCorrectAnswer,
-});
+const getQuestionInfo = () => {
+  const text = getRandomExpression();
+  const correctAnswer = getCorrectAnswer(text);
+  return {
+    text,
+    correctAnswer,
+  };
+};
+
+const makeGameStep = initGameStep({ getQuestionInfo });
 
 export default initGame(makeGameStep, rulesText);

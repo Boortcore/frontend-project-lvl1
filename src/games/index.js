@@ -10,12 +10,11 @@ const askQuestion = async (questionText) => {
   return promptly.prompt('Your answer:');
 };
 
-export const initGameStep = ({ getTextQuestion, getCorrectAnswer }) => {
+export const initGameStep = ({ getQuestionInfo }) => {
   const makeGameStep = async (questionCount = 1) => {
     if (questionCount > MAX_QUESTION_NUMBER) return { status: WINNING };
-    const questionText = getTextQuestion();
-    const correctAnswer = getCorrectAnswer(questionText);
-    const userAnswer = await askQuestion(questionText);
+    const { text, correctAnswer } = getQuestionInfo();
+    const userAnswer = await askQuestion(text);
 
     if (userAnswer !== correctAnswer) {
       return { status: FAIL, userAnswer, correctAnswer };
