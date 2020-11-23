@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 import gameInfo from '../src/games/brain-progression.js';
-import initGame from '../src/games/index.js';
+import startGame from '../src/game-engine.js';
 
-const startGame = initGame(gameInfo);
-startGame();
+startGame(gameInfo);

@@ -3,7 +3,7 @@ import getRandomInteger from '../utils.js';
 const MIN_NUMBER = 1;
 const MAX_NUMBER = 10;
 
-const rulesDescription = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
 const operators = ['+', '-', '*'];
 
@@ -27,21 +27,19 @@ const calculate = (argument1, operator, argument2) => {
   }
 };
 
-const getCorrectAnswer = (expression) => {
-  const [argument1, operator, argument2] = expression.split(' ');
-  return String(calculate(+argument1, operator, +argument2));
-};
-
 const getQuestionInfo = () => {
   const expression = getRandomExpression();
-  const correctAnswer = getCorrectAnswer(expression);
+
+  const [argument1, operator, argument2] = expression.split(' ');
+  const correctAnswer = String(calculate(+argument1, operator, +argument2));
+
   return {
-    questionText: expression,
+    question: expression,
     correctAnswer,
   };
 };
 
 export default {
   getQuestionInfo,
-  rulesDescription,
+  description,
 };

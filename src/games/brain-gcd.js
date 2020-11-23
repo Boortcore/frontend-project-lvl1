@@ -3,22 +3,22 @@ import getRandomInteger from '../utils.js';
 const MIN_NUMBER = 1;
 const MAX_NUMBER = 100;
 
-const rulesDescription = 'Find the greatest common divisor of given numbers.';
+const description = 'Find the greatest common divisor of given numbers.';
 
 const getGcd = (a, b) => (!b ? a : getGcd(b, a % b));
 
 const getQuestionInfo = () => {
-  const numbers = [
-    getRandomInteger(MIN_NUMBER, MAX_NUMBER), getRandomInteger(MIN_NUMBER, MAX_NUMBER),
-  ];
-  const correctAnswer = getGcd(...numbers);
+  const number1 = getRandomInteger(MIN_NUMBER, MAX_NUMBER);
+  const number2 = getRandomInteger(MIN_NUMBER, MAX_NUMBER);
+  const correctAnswer = getGcd(number1, number2);
+
   return {
-    questionText: numbers.join(' '),
+    question: `${number1} ${number2}`,
     correctAnswer: String(correctAnswer),
   };
 };
 
 export default {
   getQuestionInfo,
-  rulesDescription,
+  description,
 };

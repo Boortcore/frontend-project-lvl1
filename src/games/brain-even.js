@@ -3,7 +3,7 @@ import getRandomInteger from '../utils.js';
 const MIN_NUMBER = 1;
 const MAX_NUMBER = 20;
 
-const rulesDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (number) => number % 2 === 0;
 
@@ -13,12 +13,12 @@ const getQuestionInfo = () => {
   const randomInteger = getRandomInteger(MIN_NUMBER, MAX_NUMBER);
   const correctAnswer = getCorrectAnswer(randomInteger);
   return {
-    questionText: randomInteger,
+    question: randomInteger,
     correctAnswer,
   };
 };
 
 export default {
   getQuestionInfo,
-  rulesDescription,
+  description,
 };

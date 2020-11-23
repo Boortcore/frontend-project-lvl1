@@ -6,7 +6,7 @@ const REPLACING_TEXT = '..';
 const MIN_VALUE = 1;
 const MAX_VALUE = 10;
 
-const rulesDescription = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
 const getSequence = (startValue, diff) => {
   const sequenceLength = getRandomInteger(MIN_SEQUENCE_LENGTH, MAX_SEQUENCE_LENGTH);
@@ -21,12 +21,12 @@ const getQuestionInfo = () => {
   const randomIndex = getRandomInteger(0, sequence.length - 1);
   const correctAnswer = startValue + diff * randomIndex;
   return {
-    questionText: sequence.map((number) => (number !== correctAnswer ? number : REPLACING_TEXT)).join(' '),
+    question: sequence.map((number) => (number !== correctAnswer ? number : REPLACING_TEXT)).join(' '),
     correctAnswer: String(correctAnswer),
   };
 };
 
 export default {
   getQuestionInfo,
-  rulesDescription,
+  description,
 };
